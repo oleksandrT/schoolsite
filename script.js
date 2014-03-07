@@ -29,4 +29,14 @@ $(document).ready( function() {
 		current.removeClass('visible')
 		$(next).addClass('visible')
 	});
+
+	$('.read').on('mouseover', function(e) {
+		console.log($(this).find('.imgTitle'))
+		var current = $(this).find('.imgTitle')
+		$(current).show()
+		$(this).on('mouseout', function() {
+			$(current).hide()
+		})
+	} )
+
 });
