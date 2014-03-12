@@ -1,0 +1,237 @@
+/* Styles reset */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #6F747C;
+}
+
+h3 {
+	margin-bottom: 0;
+}
+
+body {
+	background-color: #E1E6E7;
+	color: #6F747C;
+	font-family: Helvetica;
+	font-size: .8em;
+	line-height: 1.5em;
+}
+
+.wrapper {
+	position: relative;
+	height: 100%;
+}
+
+.news {
+	position: absolute;
+	padding: 2%;
+	top: 0;
+	left: 0;
+	width: 18%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.newsItem {
+	padding: 2% 0;
+}
+
+.newsItem a:hover {
+	color: #000;
+}
+
+.newsItem p {
+	margin-top: 5px;
+}
+
+.main {
+	margin: 0 25%;
+	padding-top: 2%;
+}
+
+.sidebar {
+	float: right;
+	width: 24%;
+	padding-top: 2%;
+}
+
+.logo {
+	display: block;
+	margin-bottom: 5%;
+	padding-left: 5%;
+}
+
+.logo img {
+	width: 60%;
+}
+
+.menu {
+	padding: 5%;
+	margin-bottom: 5%;
+}
+
+.menu ul {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.menu ul li {
+	padding: 3px 0;
+}
+
+.menu li a {
+	padding-left: 4%;
+}
+
+.menu li a:hover {
+	color: #000;
+}
+
+.slider {
+	position: relative;
+	max-height: 510px;
+	overflow: hidden;
+}
+
+.slider img {
+	width: 100%;
+}
+
+.slider div.comment {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 3%;
+}
+
+.commentText {
+	background-color: #fff;
+	width: 88%;
+	padding: 2%;
+	margin: -5px auto 2%;
+	display: block;
+}
+
+.block1, .adBlock {
+	background-color: #fff;
+	padding: 5%;
+	margin-bottom: 5%;
+}
+
+.read {
+	position: relative;
+}
+
+.read a {
+	height: 100%;
+}
+
+.adBlock {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.adBlock img {
+	width: 100%;
+}
+
+.menuBtn {
+	display: none;
+	position: absolute;
+}
+
+.imgTitle {
+	display: none; 
+	padding-top: 80px; 
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	left: 0; 
+	right: 0; 
+	background-image: url(bg_tile.png); 
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+.newsletter {
+	padding: 3% 0;
+}
+
+.newsletter input[type="input"] {
+	width: 300px;
+	color: #6F747C;
+	margin-bottom: 10px;
+}
+
+.newsletter input[type="submit"] {
+	background-color: #6F747C;
+	color: #fff;
+	border: 0;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.barCode {
+	float: right;
+	padding-top: 5%;
+}
+
+.styleSwitcher {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+	background-color: #000;
+	color: #b8b8b8;
+	padding: 10px;
+}
+
+.styleSwitcher a {
+	color: #fff;
+	padding: 0 10px;
+}
+
+@media (max-width: 450px) {
+	.sidebar {
+		float: none;
+		width: 100%;
+		display: none;
+	}
+
+	.main {
+		margin: 0;
+		width: 100%;
+	}
+
+	.news {
+		position: relative;
+		width: 100%;
+	}
+
+	.menuBtn {
+		display: block;
+	}
+
+	.menuBtn img {
+		width: 25px;
+	}
+
+	.barCode {
+		float: none;
+		padding-top: 5%;
+	}
+}
