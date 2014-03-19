@@ -1,42 +1,121 @@
 $(document).ready( function() {
-	var banners = $('.banner'),
-	i = 1;
+	// info bar oat the top
+	var infoDiv = document.createElement('div');
+	$(infoDiv).addClass('infoDiv');	
+	$(infoDiv).html( 'width: ' + $( window ).width() + 'px    ' + 'height: ' + $( window ).height()  + 'px' );
+	$('body').append(infoDiv);
+
+	$( window ).resize(function() {
+		$(infoDiv).html( 'width: ' + $( window ).width() + 'px    ' + 'height: ' + $( window ).height()  + 'px' );
+
+		slidesLength = $('.slider ul li').length
+		step = $(slides[0]).width()
+		$('.slider ul').css({
+			width: function() {
+				listWidth = 100*slidesLength + '%'
+				return listWidth
+			}
+		})
+
+		slideWidth = 100 / slidesLength
+		for (var j = 0; j < slidesLength; j++) {
+			$(slides[j]).css('width', slideWidth + '%')
+		}
+	})
+	// end of info bar
+
+	var slider = $('.slider ul'),
+		slidesLength = $('.slider ul li').length,
+		slides = $('.slider ul li'),
+		listWidth = 0,
+		i = 0,
+		step = $(slides[0]).width(),
+		prev = {}
+	$('.slider ul').css({
+		width: function() {
+			listWidth = 100*slidesLength + '%'
+			return listWidth
+		}
+	})
+
+	slideWidth = 100 / slidesLength
+
+	for (var j = 0; j < slidesLength; j++) {
+		$(slides[j]).css('width', slideWidth + '%')
+	}
+
 	$('.next').on('click', function() {
 		var current = $('.visible'),
-			first = $('.banner')[0];
-		if (i < banners.length) {
 			next = current.next()
-			i++
+		if (next.hasClass('banner')) {
+			next.addClass('visible')
+			slider.css({
+				'marginLeft': function() {
+					var str = slider.css('marginLeft'),
+						last = 0
+					if ( str.indexOf('px') != -1 ) { last = str.indexOf('px') }
+					else if ( str.indexOf('%') != -1 ) { last = str.indexOf('%') }
+					else { last = 0 }
+					numb = +(str.substring(0, last))
+					return numb - step
+				}
+			})
+			current.removeClass('visible')
 		}
 		else {
-			next = $(first)
-			i = 1
+			$('.slider ul li:first').addClass('visible')
+			$('.slider ul').css({'margin-left':'0'})
+			current.removeClass('visible')
 		}
-		current.removeClass('visible')
-		next.addClass('visible')
-	});
+
+	})
+
 	$('.prev').on('click', function() {
-		var current = $('.visible'),
-			first = $('.banner')[0];
-		if (i > 1) {
-			next = current.prev()
-			i--
+		var current = $('.visible')
+		prev = current.prev()
+		console.log('current: ', current.find('img').attr('src'))
+		console.log('prev: ', prev.find('img').attr('src'))
+		console.log('has class banner?: ', prev.hasClass('banner'))
+		if ( prev.hasClass('banner') ) {
+			prev.addClass('visible')
+			slider.css({
+				'marginLeft': function() {
+					var str = slider.css('marginLeft'),
+						last = 0
+					if ( str.indexOf('px') != -1 ) { last = str.indexOf('px') }
+					else if ( str.indexOf('%') != -1 ) { last = str.indexOf('%') }
+					else { last = 0 }
+					numb = +(str.substring(0, last))
+					return numb + step
+				}
+			})
+			current.removeClass('visible')
 		}
 		else {
-			i = banners.length
-			next = $('.banner')[i-1]
+			console.log( 'last: ', $('.slider ul').last() )
+			$('.slider ul li').last().addClass('visible')
+			console.log($('.slider ul').width())
+			console.log(step)
+			console.log($('.slider ul').width() - step)
+
+			$('.slider ul').css({
+				'marginLeft':function() {
+					console.log('result: ', $('.slider ul').width() - step)
+					return -($('.slider ul').width() - step)
+				}
+			})
+			current.removeClass('visible')
 		}
-		current.removeClass('visible')
-		$(next).addClass('visible')
-	});
+	})
 
-	$('.read').on('mouseover', function(e) {
-		console.log($(this).find('.imgTitle'))
-		var current = $(this).find('.imgTitle')
-		$(current).show()
-		$(this).on('mouseout', function() {
-			$(current).hide()
-		})
-	} )
+	$('.menu-icon').on('click', function() {
+		$('.sidebar').addClass('open')
+	})
 
-});
+	$('.close-icon').on('click', function() {
+		$('.sidebar').removeClass('open')
+	})
+
+
+
+})
