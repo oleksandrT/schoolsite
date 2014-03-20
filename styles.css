@@ -168,9 +168,10 @@ a.next i {
 
 .news-item {
 	line-height: 1.4em;
-	border-bottom: 1px solid #323236;
+	border-top: 1px solid #323236;
 	display: block;
 	padding-bottom: 10px;
+	margin-top: 10px;
 }
 
 .sign-up input[type="input"] {
@@ -244,9 +245,25 @@ ul.menu li {
 	}
 
 	.news, .sign-up {
-		width: 43%;
-		margin: 15px 0 10px 20px;
-		display: inline-table;
+		width: 50%;
+		margin: 0 -4px 0 0;
+		display: inline-block;
+		vertical-align: top;
+		background-color: transparent;
+		padding: 0;
+	}
+
+	.inner {
+		background-color: #fff;
+		padding: 4%;
+	}
+
+	.left-block {
+		margin: 4% 2% 4% 4%;
+	}
+
+	.right-block {
+		margin: 4% 4% 4% 2%;
 	}
 
 	.menu-icon {

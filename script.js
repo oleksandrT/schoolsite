@@ -1,13 +1,13 @@
 $(document).ready( function() {
 	// info bar oat the top
-	var infoDiv = document.createElement('div');
+	/*var infoDiv = document.createElement('div');
 	$(infoDiv).addClass('infoDiv');	
 	$(infoDiv).html( 'width: ' + $( window ).width() + 'px    ' + 'height: ' + $( window ).height()  + 'px' );
-	$('body').append(infoDiv);
+	$('body').append(infoDiv);*/
 
 	$( window ).resize(function() {
-		$(infoDiv).html( 'width: ' + $( window ).width() + 'px    ' + 'height: ' + $( window ).height()  + 'px' );
-
+		/*$(infoDiv).html( 'width: ' + $( window ).width() + 'px    ' + 'height: ' + $( window ).height()  + 'px' );*/
+		// end of info bar
 		slidesLength = $('.slider ul li').length
 		step = $(slides[0]).width()
 		$('.slider ul').css({
@@ -22,7 +22,6 @@ $(document).ready( function() {
 			$(slides[j]).css('width', slideWidth + '%')
 		}
 	})
-	// end of info bar
 
 	var slider = $('.slider ul'),
 		slidesLength = $('.slider ul li').length,
