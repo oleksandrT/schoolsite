@@ -43,7 +43,22 @@ $(document).ready( function() {
 		$(slides[j]).css('width', slideWidth + '%')
 	}
 
-	$('.next').on('click', function() {
+	$('.next').on('click', moveToRight )
+
+	$('.prev').on('click', moveToLeft )
+
+	$('.menu-icon').on('click', function() {
+		$('.sidebar').addClass('open')
+	})
+
+	$('.close-icon').on('click', function() {
+		$('.sidebar').removeClass('open')
+	})
+
+	var animation = setInterval(moveToRight, 5000)
+
+
+	function moveToRight() {
 		var current = $('.visible'),
 			next = current.next()
 		if (next.hasClass('banner')) {
@@ -66,15 +81,11 @@ $(document).ready( function() {
 			$('.slider ul').css({'margin-left':'0'})
 			current.removeClass('visible')
 		}
+	}
 
-	})
-
-	$('.prev').on('click', function() {
+	function moveToLeft() {
 		var current = $('.visible')
 		prev = current.prev()
-		console.log('current: ', current.find('img').attr('src'))
-		console.log('prev: ', prev.find('img').attr('src'))
-		console.log('has class banner?: ', prev.hasClass('banner'))
 		if ( prev.hasClass('banner') ) {
 			prev.addClass('visible')
 			slider.css({
@@ -91,30 +102,16 @@ $(document).ready( function() {
 			current.removeClass('visible')
 		}
 		else {
-			console.log( 'last: ', $('.slider ul').last() )
 			$('.slider ul li').last().addClass('visible')
-			console.log($('.slider ul').width())
-			console.log(step)
-			console.log($('.slider ul').width() - step)
 
 			$('.slider ul').css({
 				'marginLeft':function() {
-					console.log('result: ', $('.slider ul').width() - step)
 					return -($('.slider ul').width() - step)
 				}
 			})
 			current.removeClass('visible')
 		}
-	})
-
-	$('.menu-icon').on('click', function() {
-		$('.sidebar').addClass('open')
-	})
-
-	$('.close-icon').on('click', function() {
-		$('.sidebar').removeClass('open')
-	})
-
+	}
 
 
 })
