@@ -27,15 +27,15 @@
 						<div class="field">
 							<span class="field-title">Contact information</span>
 							<div class="field-item">
-								<label for="name">Name:</label>
+								<label for="name">Name*:</label>
 								<input type="text" name="name">
 							</div>
 							<div class="field-item">
-								<label for="phone">Phone:</label>
+								<label for="phone">Phone*:</label>
 								<input type="text" name="phone">
 							</div>
 							<div class="field-item">
-								<label for="email">Email:</label>
+								<label for="email">Email*:</label>
 								<input type="text" name="email">
 							</div>
 						</div>
@@ -43,55 +43,63 @@
 							<span class="field-title">Group lessons</span>
 							<div class="field-item">
 								<label for="day1">March 27</label>
-								<p>
-									<input type="checkbox" name="day1">
-									<span>19:30 - "Work with the basic" (Posture, Embrace, Connection)</span>
-								</p>
-								<p>
-									<input type="checkbox" name="day1">
-									<span>21:00 - "Three key pillars" (Salida, Walking, Ocho)</span>
-								</p>
+								<div class="classes-themes">
+									<p>
+										<input type="checkbox" name="day1">
+										<span>19:30 - "Work with the basic" (Posture, Embrace, Connection)</span>
+									</p>
+									<p>
+										<input type="checkbox" name="day1">
+										<span>21:00 - "Three key pillars" (Salida, Walking, Ocho)</span>
+									</p>
+								</div>
 							</div>
 							<div class="field-item">
 								<label for="day2">March 28</label>
-								<p>
-									<input type="checkbox" name="day2">
-									<span>19:30 - "Cadencia" (Seasoning of walking)</span>
-								</p>
-								<p>
-									<input type="checkbox" name="day2">
-									<span>21:00 - "Barridas" (Basic and more complex)</span>
-								</p>
+								<div class="classes-themes">
+									<p>
+										<input type="checkbox" name="day2">
+										<span>19:30 - "Cadencia" (Seasoning of walking)</span>
+									</p>
+									<p>
+										<input type="checkbox" name="day2">
+										<span>21:00 - "Barridas" (Basic and more complex)</span>
+									</p>
+								</div>
 							</div>
 							<div class="field-item">
 								<label for="day3">March 29</label>
-								<p>
-									<input type="checkbox" name="day3">
-									<span>14:00 - "Sacadas" (Basic sacadas + Combination with sacadas)</span>
-								</p>
-								<p>
-									<input type="checkbox" name="day3">
-									<span>17:00 - "Giros 1" (Dissociation of your body)</span>
-								</p>
-								<p>
-									<input type="checkbox" name="day3">
-									<span>21:30 - GRAND MILONGA / MASTERS SHOW</span>
-								</p>
+								<div class="classes-themes">
+									<p>
+										<input type="checkbox" name="day3">
+										<span>14:00 - "Sacadas" (Basic sacadas + Combination with sacadas)</span>
+									</p>
+									<p>
+										<input type="checkbox" name="day3">
+										<span>17:00 - "Giros 1" (Dissociation of your body)</span>
+									</p>
+									<p>
+										<input type="checkbox" name="day3">
+										<span>21:30 - GRAND MILONGA / MASTERS SHOW</span>
+									</p>
+								</div>
 							</div>
 							<div class="field-item">
 								<label for="day4">March 29</label>
-								<p>
-									<input type="checkbox" name="day4">
-									<span>14:00 - "Giros 2" (More complex combinations)</span>
-								</p>
-								<p>
-									<input type="checkbox" name="day4">
-									<span>15:30 - "Milonga" (The point of accent)</span>
-								</p>
-								<p>
-									<input type="checkbox" name="day4">
-									<span>17:00 - "Canyengue" (Enjoy Antique style)</span>
-								</p>
+								<div class="classes-themes">
+									<p>
+										<input type="checkbox" name="day4">
+										<span>14:00 - "Giros 2" (More complex combinations)</span>
+									</p>
+									<p>
+										<input type="checkbox" name="day4">
+										<span>15:30 - "Milonga" (The point of accent)</span>
+									</p>
+									<p>
+										<input type="checkbox" name="day4">
+										<span>17:00 - "Canyengue" (Enjoy Antique style)</span>
+									</p>
+								</div>
 							</div>
 						</div>
 						<div class="field">
@@ -114,15 +122,45 @@
 						</div>
 						<input type="submit" class="submit-button">
 					</form>
+					<p>Note: * Starred fields are required.</p>
 				</div>
 			</div>
 			<div class="item-box">
 				<div class="inner big-block">
 					<p><b>Workshop price</b></p>
-					<table>
-						<th></th>
-						<tr></tr>
+					<table class="workshop-price">
+						<tr>
+							<th class="grey">Class package</th>
+							<th>Before March 16</th>
+							<th>After March 16</th>
+						</tr>
+						<tr>
+							<td class="grey">10 class</td>
+							<td>1800RMB</td>
+							<td>2100RMB</td>
+						</tr>
+						<tr>
+							<td class="grey">8 class</td>
+							<td>1520RMB</td>
+							<td>1800RMB</td>
+						</tr>
+						<tr>
+							<td class="grey">6 class</td>
+							<td>1200RMB</td>
+							<td>1400RMB</td>
+						</tr>
+						<tr>
+							<td class="grey">single class</td>
+							<td>260RMB</td>
+							<td>260RMB</td>
+						</tr>
 					</table>
+				</div>
+			</div>
+			<div class="item-box">
+				<div class="inner big-block">
+					<p><b>Program</b></p>
+					<p>You can download workshop program as PDF file.  <a href="#" class="button">Download</a></p>
 				</div>
 			</div>
 		</div>
@@ -162,13 +200,13 @@
 			<li><a href="classes.html">Classes</a></li>
 			<li><a href="milonga and practica.html">Milonga y Practica</a></li>
 			<li><a href="workshop.html">Workshop</a></li>
-			<li><a href="#">Studio Renting</a></li>
-			<li><a href="#">Find us</a></li>
+			<li><a href="studio renting.html">Studio Renting</a></li>
+			<li><a href="find us.html">Find us</a></li>
 
-			<li><a href="#">Pictures</a></li>
-			<li><a href="#">Videos</a></li>
-			<li><a href="#">About Tango</a></li>
-			<li><a href="#">Links</a></li>
+			<li><a href="pictures.html">Pictures</a></li>
+			<li><a href="videos.html">Videos</a></li>
+			<li><a href="about tango.html">About Tango</a></li>
+			<li><a href="links.html">Links</a></li>
 
 			<li><a href="#">Shanghai Tango Marathon</a></li>
 			<li><a href="#">Tango Shop</a></li>

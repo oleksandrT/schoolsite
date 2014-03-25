@@ -449,6 +449,33 @@ input.submit-button {
 	display: block;
 }
 
+table.workshop-price {
+	border-collapse:collapse;
+}
+
+table.workshop-price td, table.workshop-price th {
+	border: 1px solid #c0c0c0;
+	padding: 10px;
+}
+
+td.grey, th.grey {
+	background-color: rgba(192, 192, 192, 0.43);
+}
+
+a.button {
+	background-color: #d50000;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.right {
+	float: right;
+}
+
+/* ============================================================= */
+
 @media (min-width: 340px), (min-device-width: 340px) {
 	body {
 		background-size: cover;
@@ -529,8 +556,8 @@ input.submit-button {
 		width: 79%;
 	}
 
-	form div.field-item p {
-		padding-left: 90px;
+	form div.field-item div.classes-themes {
+		padding-left: 167px;
 	}
 }
 
