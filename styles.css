@@ -320,6 +320,22 @@ ul.menu a:hover {
 	border-bottom: 1px solid #e4e4e4;
 }
 
+.info-block input[type="input"] {
+	width: 98%;
+	height: 2.4em;
+}
+
+.info-block input[type="submit"] {
+	padding: 10px 20px;
+	margin: 20px 0 10px;
+	font-size: 1em;
+	color: #fff;
+	background-color: #d50000;
+	border: 0;
+	cursor: pointer;
+	display: block;
+}
+
 .schedule {
 	border: 1px solid #c0c0c0;
 	position: relative;
@@ -367,7 +383,71 @@ li.empty {
 
 .inner img {
 		width: 100%;
-	}
+}
+
+/*form {
+	font-size: .8em;
+}*/
+
+.field {
+	border: 1px solid #c0c0c0;
+	padding: 2%;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+span.field-title {
+	position: absolute;
+	top: -13px;
+	background-color: #fff;
+	padding: 0 10px;
+	left: 10px;
+}
+
+.field-item {
+	margin: 20px 0;
+}
+
+form div.field-item p {
+	font-size: .8em;
+}
+
+form div.field-item label {
+	width: 20%;
+}
+
+form div.field-item input[type="text"] {
+	background: none;
+	border: 1px solid #c0c0c0;
+	height: 2.4em;
+	/*border-bottom: 1px #616363 solid;*/
+	outline: none;
+	width: 100%;
+}
+
+form div.field-item input[type="checkbox"] {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	float: left;
+	margin-right: 4px;
+}
+
+form textarea {
+	width: 75%;
+	height: 80px;
+}
+
+input.submit-button {
+	padding: 10px 20px;
+	margin: 20px 0 10px;
+	font-size: 1em;
+	color: #fff;
+	background-color: #d50000;
+	border: 0;
+	cursor: pointer;
+	display: block;
+}
 
 @media (min-width: 340px), (min-device-width: 340px) {
 	body {
@@ -438,7 +518,19 @@ li.empty {
 	}
 
 	.sign-up input[type="submit"] {
-		display: inline;;
+		display: inline;
+	}
+
+	form div.field-item label {
+		float: left;
+	}
+
+	form div.field-item input[type="text"] {
+		width: 79%;
+	}
+
+	form div.field-item p {
+		padding-left: 90px;
 	}
 }
 
