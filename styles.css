@@ -320,6 +320,18 @@ ul.menu a:hover {
 	color: #e4e4e4;
 }
 
+.shop-filter-category a {
+	background-image: url('img/forms.png');
+	background-repeat: no-repeat;
+	background-position: 0 4px;
+	padding-left: 20px;
+}
+
+.shop-filter-category li.selected a {
+	background-position: 0 -46px;
+	color: #fff;
+}
+
 .info-block a:hover {
 	color: #fff;
 }
@@ -514,6 +526,10 @@ a.button {
 	border: 1px solid #c0c0c0; 
 	text-align: center; 
 	margin-bottom: 4%;
+}
+
+.shoe-item img {
+	max-height: 270px;
 }
 
 .shoe-item span, .shoe-item div.item-description {
@@ -717,8 +733,12 @@ div.item-price {
 
 	.shoe-item {
 		display: inline-block;
-		width: 49%;
+		width: 48%;
 		vertical-align: top;
+	}
+
+	.shoe-item:nth-child(odd) {
+		margin-right: 2%;
 	}
 
 }
