@@ -113,5 +113,41 @@ $(document).ready( function() {
 		}
 	}
 
+	// day picker
+	var daysTitle = $('li.daySelect')
+		visibleDay = daysTitle[0]
+		$('div.days').append('<ul class="daysList" />')
+		for (var i = 0; i < daysTitle.length; i++) {
+			$('ul.daysList').append('<li>'+$(daysTitle[i]).text()+'</li>')
+		};
+	daysTitle.on('click', function(){
+		$('ul.daysList').show();
+		$('ul.daysList li').on('click', function(){
+			var j;
+			for ( var i = 0; i < daysTitle.length; i++) {
+				if ( $(daysTitle[i]).text() == $(this).text() ) {
+					console.log('i = ', i);
+					j = i;
+				};				
+			};
+			console.log('j = ', j);	
+			console.log('1 ', $(visibleDay).text());
+			$(visibleDay).parent().addClass('not-first-day');
+			console.log('2 ', $(daysTitle[j]).text());
+			$(daysTitle[j]).parent().removeClass('not-first-day');
+			visibleDay = daysTitle[j];
+			console.log('3 ', $(visibleDay).text());
+			$('ul.daysList').hide();
+			return;
+		})
+	})
+
+	$(function() {
+		$(".rslides").responsiveSlides({
+			auto: false,
+			nav: true,
+			namespace: "rslides"
+		});
+	});
 
 })

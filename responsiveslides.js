@@ -308,8 +308,8 @@
         // Navigation
         if (settings.nav) {
           var navMarkup =
-            "<a href='#' class='" + navClass + " prev'>" + settings.prevText + "</a>" +
-            "<a href='#' class='" + navClass + " next'>" + settings.nextText + "</a>";
+            "<a href='#' class='" + navClass + " prev1'>" + settings.prevText + "</a>" +
+            "<a href='#' class='" + navClass + " next1'>" + settings.nextText + "</a>";
 
           // Inject navigation
           if (options.navContainer) {
@@ -319,7 +319,7 @@
           }
 
           var $trigger = $("." + namespaceIdx + "_nav"),
-            $prev = $trigger.filter(".prev");
+            $prev = $trigger.filter(".prev1");
 
           // Click event handler
           $trigger.bind("click", function (e) {
